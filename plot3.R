@@ -18,7 +18,7 @@ dtable$datetime=as.POSIXct(paste(dtable$Date, dtable$Time))
 png(filename = "plot3.png", width = 480, height = 480, bg = "transparent")
 
 #Actual Plot
-with(dtable, plot(Sub_metering_1 ~ datetime, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"), col='black')
+with(dtable, plot(Sub_metering_1 ~ datetime, type = "l", xlab = "", ylab = "Energy Sub Metering"), col='black')
 with(dtable, lines(Sub_metering_2 ~ datetime, col = 'Red'))
 with(dtable, lines(Sub_metering_3 ~ datetime, col = 'Blue'))
 legend("topright", col = c("black", "red", "blue"), lty = 1, legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))

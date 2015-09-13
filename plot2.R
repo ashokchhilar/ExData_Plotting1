@@ -15,7 +15,7 @@ dtable$Date<-as.Date(dtable$Date, format="%d/%m/%Y")
 dtable$datetime=as.POSIXct(paste(dtable$Date, dtable$Time))
 
 #open a file device to plot to
-png(filename = "plot2.png", width = 480, height = 480)
+png(filename = "plot2.png", width = 480, height = 480, bg = "transparent")
 
 #Plot 2 is simple line plot
 with(dtable, plot(Global_active_power~datetime, type = "l", ylab="Global Active Power(kilowatts", xlab=""))

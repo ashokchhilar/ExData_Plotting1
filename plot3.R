@@ -15,9 +15,9 @@ dtable$Date<-as.Date(dtable$Date, format="%d/%m/%Y")
 dtable$datetime=as.POSIXct(paste(dtable$Date, dtable$Time))
 
 #open a file device to plot to
-png(filename = "plot3.png", width = 480, height = 480)
+png(filename = "plot3.png", width = 480, height = 480, bg = "transparent")
 
-#Actual Plot 3 has 3 pieces
+#Actual Plot
 with(dtable, plot(Sub_metering_1 ~ datetime, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"), col='black')
 with(dtable, lines(Sub_metering_2 ~ datetime, col = 'Red'))
 with(dtable, lines(Sub_metering_3 ~ datetime, col = 'Blue'))

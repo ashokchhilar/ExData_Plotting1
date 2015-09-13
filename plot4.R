@@ -15,7 +15,7 @@ dtable$Date<-as.Date(dtable$Date, format="%d/%m/%Y")
 dtable$datetime=as.POSIXct(paste(dtable$Date, dtable$Time))
 
 #open a file device to plot to
-png(filename = "plot4.png", width = 480, height = 480)
+png(filename = "plot4.png", width = 480, height = 480,bg = "transparent")
 
 #Actual Plot 4 needs grid layout
 par(mfrow = c(2,2))

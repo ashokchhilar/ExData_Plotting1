@@ -15,7 +15,7 @@ dtable$Date<-as.Date(dtable$Date, format="%d/%m/%Y")
 dtable$datetime=as.POSIXct(paste(dtable$Date, dtable$Time))
 
 #open a file device to plot to
-png(filename = "plot1.png", width = 480, height = 480)
+png(filename = "plot1.png", width = 480, height = 480, bg = "transparent")
 
 #Plot 1 is histogram with main label = Global Active Power
 with(dtable, hist(Global_active_power, col = "red", main = paste("Global Active Power"), xlab = "Global Active Power (kilowatts)"))
